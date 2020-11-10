@@ -43,13 +43,22 @@ const filterUsers = () => {
     console.log(filteredUsers)
 }
 
-const onlyNames = () => {
+const onlyAddresses = () => {
     return users.map(user => {
         let totalAddress = Object.keys(user.address).map(propName => Object.value[propName])
         console.log(totalAddress)
         return {
             user: user.name,
             address: totalAddress
+        }
+    })
+}
+
+const onlyNames = () => {
+    return users.map(user => {
+        let totalNames = Object.map(user.name)
+        console.log(totalNames)
+        return {totalNames
         }
     })
 }
