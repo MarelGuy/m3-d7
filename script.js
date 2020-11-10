@@ -10,12 +10,22 @@ window.onload = async () => {
         );
 
         let users = await response.json();
-        console.log(users)
+        console.table(users)
 
-        users.forEach(element => {
-            console.log(element.name)
+        users.forEach((data) => {
+            let appendMe = document.querySelector("#appendMe")
+            let element = document.createElement("li")
+            appendMe.appendChild(element)
+            element.innerHTML = "ID: " + data.id + " | Name: " + data.name + " | Username: " + data.username + " | Email: " + data.email
         });
-        
+
+        users.forEach((data) => {
+            let appendMe2 = document.querySelector("#appendMe2")
+            let element2 = document.createElement("li")
+            appendMe2.appendChild(element2)
+            element2.innerHTML = data.name
+        });
+
     }
 
     catch (error) { }
