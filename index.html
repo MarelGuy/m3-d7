@@ -38,9 +38,6 @@
     -->
 </head>
 
-
-
-
 <body>
 
   <div class="dropdown">
@@ -49,18 +46,24 @@
       Dropdown button
     </button>
     <div class="d-flex">
-      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <!-- <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
         <a class="dropdown-item">Name</a>
         <a class="dropdown-item">Username</a>
         <a class="dropdown-item">Email</a>
-      </div>
+      </div> -->
 
-      <input class="form-control w-25" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success" type="submit">Search</button>
+
+      <input class="form-control w-25" id="filterInput" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success" onclick="filterUsers()">Search</button>
     </div>
 
   </div>
-
+  <select id="fieldSelect">
+    <option value="">Select</option>
+    <option value="name">Name</option>
+    <option value="email">Email</option>
+    <option value="username">Username</option>
+  </select>
   <div>
     <ol style="list-style-type: none;" id="appendMe">
 
